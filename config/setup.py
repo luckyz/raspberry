@@ -3,8 +3,6 @@
 from os import system
 
 
-CLIENT_USER = 'lucas'
-CLIENT_IP = '192.168.1.101'
 RPI_USER = 'pi'
 RPI_IP = system("ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'")
 
@@ -35,10 +33,3 @@ for line in f:
     # Aliases
     system('sudo >> ~/.bashrc')
     system('sudo alias >> ~/.bashrc')
-
-    # Set SSH access
-    system('ssh {0}@{1}').format(CLIENT_USER, CLIENT_IP)
-    system('ssh-keygen -R {0}').format(RPI_IP)
-    system('logout')
-    system('ssh-keygen -b 4096 -t rsa')
-    system('ssh-copy-id {0}@{1}').format(CLIENT_USER, CLIENT_IP)
