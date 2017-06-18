@@ -1,0 +1,7 @@
+clear
+# Customized aliases
+alias pydir="cd ~/Documents/py/src/"
+alias run="sudo python manage.py runserver 0.0.0.0:8000"
+newpy(){
+	sudo cp ~/Documents/py/projects/raspberry/templates/base.py $1.py
+}

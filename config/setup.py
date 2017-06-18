@@ -31,5 +31,5 @@ for line in f:
     system(install)
 
     # Aliases
-    system('sudo >> ~/.bashrc')
-    system('sudo alias >> ~/.bashrc')
+    system('mkdir ~/Documents/py/;mkdir ~/Documents/py/src/;mkdir ~/Documents/py/projects/')
+    system('sudo cp bash_profile ~/.bash_profile')
