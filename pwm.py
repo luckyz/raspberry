@@ -6,7 +6,7 @@ GPIO.setmode(GPIO.BOARD)
 
 # data
 channel = 7
-freq = 30
+freq = 50
 
 GPIO.setup(channel, GPIO.OUT)
 
