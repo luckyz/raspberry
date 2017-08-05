@@ -29,7 +29,7 @@ alias gs="sudo git status"
 alias ga="sudo git add"
 alias gc="sudo git commit -m"
 alias gp="sudo git push"
-alias gp="sudo git diff"
+alias gd="sudo git diff"
 
 # Initial dir
 dev
