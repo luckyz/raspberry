@@ -1,7 +1,31 @@
 clear
-# Customized aliases
-alias pydir="cd ~/Documents/py/src/"
-alias run="sudo python manage.py runserver 0.0.0.0:8000"
-newpy(){
-	sudo cp ~/Documents/py/projects/raspberry/templates/base.py $1.py
+# === Customized aliases ===
+# SSH aliases
+alias rpi="ssh pi@192.168.1.111"
+alias devrpi="ssh pi@192.168.1.123"
+alias rrpi="ssh -R 52698:localhost:52698 pi@192.168.1.111"
+alias rdevrpi="ssh -R 52698:localhost:52698 pi@192.168.1.123"
+rssh(){
+  ssh -R 52698:localhost:52698 $1
 }
+enviar(){
+	scp "$1" "$2@$3:~/Documents/develop/"
+}
+# Directories
+alias dev="cd ~/Documents/develop/"
+alias doh="cd ~/Documents/develop/domotica/;clear"
+alias tickets="cd ~/Documents/develop/tickets/;clear"
+# Python
+newpy(){
+	sudo cp ~/Documents/projects/raspberry/templates/base.py $1.py
+}
+debug(){
+	sudo pudb "$1"
+}
+# Django
+alias run="clear;python manage.py runserver 0.0.0.0:8000"
+# Git
+alias gs="sudo git status"
+alias ga="sudo git add"
+alias gc="sudo git commit -m"
+alias gp="sudo git push"
