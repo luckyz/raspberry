@@ -30,3 +30,6 @@ alias ga="sudo git add"
 alias gc="sudo git commit -m"
 alias gp="sudo git push"
 alias gp="sudo git diff"
+
+# Initial dir
+dev
