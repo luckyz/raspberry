@@ -23,7 +23,7 @@ debug(){
 	sudo pudb "$1"
 }
 # Django
-alias run="clear;python manage.py runserver 0.0.0.0:8000"
+alias run="clear;sudo python manage.py runserver 0.0.0.0:8000"
 # Git
 alias gs="sudo git status"
 alias ga="sudo git add"
