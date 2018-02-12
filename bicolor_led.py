@@ -10,7 +10,7 @@ green = 13
 GPIO.setup((red, green), GPIO.OUT)
 
 try:
-	valor = False
+    valor = False
     while True:
     	GPIO.output(red, valor)
         GPIO.output(red, not valor)
