@@ -14,7 +14,7 @@ GPIO.setup(green, GPIO.OUT)
 GPIO.setup(blue, GPIO.OUT)
 
 try:
-    c = raw_input('> RGB: ')
+    c = int(raw_input('> RGB: '))
     GPIO.setup(red, c[0])
     GPIO.setup(green, c[1])
     GPIO.setup(blue, c[2])
