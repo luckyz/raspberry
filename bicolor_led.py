@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # coding=utf-8
 import RPi.GPIO as GPIO
-#from time import sleep
+from time import sleep
 
 
 GPIO.setmode(GPIO.BOARD) # pin physical numeration
@@ -15,6 +15,7 @@ try:
     	GPIO.output(red, valor)
         GPIO.output(red, not valor)
         valor = not valor
+	sleep(1)
         
 
 except KeyboardInterrupt:
