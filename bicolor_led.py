@@ -16,7 +16,6 @@ try:
         GPIO.output(red, not valor)
         valor = not valor
 	sleep(1)
-        
 
 except KeyboardInterrupt:
     print '\n\n[ Execution aborted ]'
