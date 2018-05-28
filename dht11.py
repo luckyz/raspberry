@@ -30,7 +30,7 @@ try:
 		print('Temperatura={0:0.1f}*  Humedad={1:0.1f}%'.format(temperatura, humedad))
 
 		# Duerme 10 segundos
-		time.sleep(10)
+		time.sleep(3)
 
 # Se ejecuta en caso de que falle alguna instruccion dentro del try
 except Exception,e:
