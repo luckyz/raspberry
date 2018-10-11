@@ -10,7 +10,8 @@ GPIO.setmode(GPIO.BOARD) # Physical numeration pins
 # GPIO.setup(pin, GPIO.OUT)
 
 try:
-	ser = ser = serial.Serial('/dev/cu.usbmodem1411', 9600)
+	# ser = ser = serial.Serial('/dev/cu.usbmodem1411', 9600) # for Mac OS X
+	ser = serial.Serial('/dev/ttyACM0', 9600) # for Raspberry Pi
 	ser.write('foo')
     while True:
         None # Write code here
