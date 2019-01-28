@@ -11,13 +11,7 @@ GPIO.setmode(GPIO.BOARD) # Physical numeration pins
 try:
     while True:
         None # Write code here
-except KeyboardInterrupt:
-    print '\n\n[ Execution aborted ]'
-except ValueError:
-    print '\n[ Unexpected value ]'
-except IndexError:
-    print '\n[ Index out of range ]'
-except TypeError:
-    print '\n[ Required values: 0 or 1 ]'
+except Exception as e:
+    print str(e)
 finally:
     GPIO.cleanup()
