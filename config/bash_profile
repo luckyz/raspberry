@@ -13,7 +13,8 @@ enviar(){
 }
 # Directories
 alias dev="cd ~/Documents/develop/"
-alias hom="cd ~/Documents/develop/domotica/;clear"
+alias raspberry="cd ~/Documents/projects/raspberry/"
+alias arduino="cd ~/Documents/develop/arduino/"
 alias projects="cd ~/Documents/projects/"
 alias tickets="cd ~/Documents/develop/tickets/;clear"
 # Python
