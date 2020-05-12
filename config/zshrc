@@ -121,14 +121,13 @@ enviar(){
 # Directories
 alias dev="cd ~/Documents/develop/"
 alias arduino="cd ~/Documents/develop/arduino/"
-alias projects="cd ~/Documents/develop/projects/"
 alias home="cd ~/Desktop"
-alias raspberry="cd ~/Documents/develop/projects/raspberry/;clear"
+alias raspberry="cd ~/Documents/develop/raspberry/;clear"
 alias tickets="cd ~/Documents/develop/tickets/;clear"
 
 # Python
 newpy(){
-	sudo cp ~/Documents/develop/projects/raspberry/templates/base.py $1.py
+	sudo cp ~/Documents/develop/raspberry/templates/base.py $1.py
 }
 debug(){
 	sudo pudb "$1"
