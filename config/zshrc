@@ -149,7 +149,7 @@ export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python2.7/dist-packages/
 
 function _update_ps1()
 {
-    export PROMPT="$(~/Documents/develop/projects/powerline-zsh/powerline-zsh.py $?)"
+    export PROMPT="$(~/Documents/develop/powerline-zsh/powerline-zsh.py $?)"
 }
 precmd()
 {
