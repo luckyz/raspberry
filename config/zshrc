@@ -101,6 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ls="ls -1FGp"
 
 # Exported from Bash
 clear
@@ -116,6 +117,7 @@ rssh(){
 enviar(){
 	scp "$1" "$2@$3:~/Documents/develop/"
 }
+
 # Directories
 alias dev="cd ~/Documents/develop/"
 alias arduino="cd ~/Documents/develop/arduino/"
@@ -123,6 +125,7 @@ alias projects="cd ~/Documents/develop/projects/"
 alias home="cd ~/Desktop"
 alias raspberry="cd ~/Documents/develop/projects/raspberry/;clear"
 alias tickets="cd ~/Documents/develop/tickets/;clear"
+
 # Python
 newpy(){
 	sudo cp ~/Documents/develop/projects/raspberry/templates/base.py $1.py
@@ -130,13 +133,16 @@ newpy(){
 debug(){
 	sudo pudb "$1"
 }
+
 # Django
 alias run="clear;python manage.py runserver 0.0.0.0:8000"
+
 # Git
 alias gs="sudo git status"
 alias ga="sudo git add"
 alias gc="sudo git commit -m"
 alias gp="sudo git push"
+
 # Vim docker
 alias python-vim='docker run -it --rm -v $(pwd):/src --workdir /src fedeg/python-vim:latest'
 
@@ -155,6 +161,7 @@ precmd()
 {
     _update_ps1
 }
+
 # Homebrew
 PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
 export PATH
