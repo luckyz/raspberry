@@ -102,8 +102,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ls="ls -1FGp"
-alias dir="dir -1FGpo"
-alias vls="vls -1FGpo"
+alias dir="ls -1FGpo"
+alias vls="ls -1FGpo"
 
 # Exported from Bash
 clear
