@@ -168,3 +168,4 @@ precmd()
 # Homebrew
 PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
 export PATH
+export PATH="/usr/local/sbin:$PATH"
