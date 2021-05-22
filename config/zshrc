@@ -15,10 +15,22 @@ export TICKETS="~/Documents/development/tickets"
 # SSH aliases
 alias rpi="ssh -R 52698:localhost:52698 $RPIUSER@$RPI"
 alias devrpi="ssh -R 52698:localhost:52698 $RPIUSER@$DEVRPI"
-rssh(){
+
+function save {
+    export $1=`pwd`
+    echo "> Se guardo [`pwd`] como: $1"
+}
+
+function saved {
+    cd $1 
+    echo "> De vuelta a [$1]"
+}
+
+function rssh {
   ssh -R 52698:localhost:52698 $1
 }
-enviar(){
+
+function enviar {
 	scp "$1" "$2@$3:$DEV"
 }
 
@@ -29,10 +41,10 @@ alias arduino="cd $ARDUINO"
 alias tickets="cd $TICKETS"
 
 # Python
-newpy(){
+function newpy {
 	sudo cp $RASPBERRY/templates/base.py $1.py
 }
-debug(){
+function debug {
 	sudo pudb "$1"
 }
 alias venv="source venv/bin/activate"
