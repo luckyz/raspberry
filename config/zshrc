@@ -13,8 +13,8 @@ export TICKETS="~/Documents/development/tickets"
 
 # Customized aliases
 # SSH aliases
-alias rpi="ssh -R 52698:localhost:52698 $RPI"
-alias devrpi="ssh -R 52698:localhost:52698 $DEVRPI"
+alias rpi="ssh -R 52698:localhost:52698 $RPIUSER@$RPI"
+alias devrpi="ssh -R 52698:localhost:52698 $RPIUSER@$DEVRPI"
 rssh(){
   ssh -R 52698:localhost:52698 $1
 }
