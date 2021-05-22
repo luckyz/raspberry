@@ -3,6 +3,7 @@ export PC01="192.168.1.101"
 export PC02="192.168.1.102"
 export RPI="192.168.1.111"
 export DEVRPI="192.168.1.112"
+export RPIUSER="pi"
 
 # Paths
 export DEV="~/Documents/development"
