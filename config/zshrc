@@ -127,6 +127,8 @@ newpy(){
 debug(){
 	sudo pudb "$1"
 }
+alias venv="source venv/bin/activate"
+alias activate=venv
 
 # Django
 alias run="clear;python3 manage.py runserver 0.0.0.0:8000"
