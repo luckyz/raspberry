@@ -16,8 +16,8 @@ export ZSH="/Users/lucas/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="powerlevel10k/powerlevel10k"
-SH_THEME="powerleve10k/powerlevel10k"
+ZSH_THEME="/home/pi/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k"
+SH_THEME="/home/pi/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k"
 POWERLEVEL10K_MODE="nerdfont-complete"
 
 # PowerLevel10k Prompt
@@ -119,10 +119,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Customized aliases
 # SSH aliases
-alias rpi="ssh pi@192.168.1.111"
-alias devrpi="ssh pi@192.168.1.123"
-alias rrpi="ssh -R 52698:localhost:52698 pi@192.168.1.111"
-alias rdevrpi="ssh -R 52698:localhost:52698 pi@192.168.1.123"
+alias rpi="ssh -R 52698:localhost:52698 pi@192.168.1.111"
+alias devrpi="ssh -R 52698:localhost:52698 pi@192.168.1.112"
 rssh(){
   ssh -R 52698:localhost:52698 $1
 }
@@ -161,3 +159,4 @@ export PATH="/Users/lucas/anaconda2/bin:$PATH"
 # Startup
 # Initialize dir with cleared screen
 dev;clear
+source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
