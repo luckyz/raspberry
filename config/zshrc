@@ -1,3 +1,51 @@
+# Constants
+export PC01="192.168.1.101"
+export PC02="192.168.1.102"
+export RPI="192.168.1.111"
+export DEVRPI="192.168.1.112"
+
+# Paths
+export DEV="~/Documents/development"
+export RASPBERRY="~/Documents/development/raspberry"
+export ARDUINO="~/Documents/development/arduino"
+export TICKETS="~/Documents/development/tickets"
+
+# Customized aliases
+# SSH aliases
+alias rpi="ssh -R 52698:localhost:52698 $RPI"
+alias devrpi="ssh -R 52698:localhost:52698 $DEVRPI"
+rssh(){
+  ssh -R 52698:localhost:52698 $1
+}
+enviar(){
+	scp "$1" "$2@$3:$DEV"
+}
+
+# Directories
+alias dev="cd $DEV"
+alias raspberry="cd $RASPBERRY"
+alias arduino="cd $ARDUINO"
+alias tickets="cd $TICKETS"
+
+# Python
+newpy(){
+	sudo cp $RASPBERRY/templates/base.py $1.py
+}
+debug(){
+	sudo pudb "$1"
+}
+alias venv="source venv/bin/activate"
+alias activate=venv
+
+# Django
+alias run="clear;python3 manage.py runserver 0.0.0.0:8000"
+
+# Git
+alias gs="sudo git status"
+alias ga="sudo git add"
+alias gc="sudo git commit -m"
+alias gp="sudo git push"
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -117,46 +165,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Customized aliases
-# SSH aliases
-alias rpi="ssh -R 52698:localhost:52698 pi@192.168.1.111"
-alias devrpi="ssh -R 52698:localhost:52698 pi@192.168.1.112"
-rssh(){
-  ssh -R 52698:localhost:52698 $1
-}
-enviar(){
-	scp "$1" "$2@$3:~/Documents/development/"
-}
-
-# Directories
-alias dev="cd ~/Documents/development/"
-alias raspberry="cd ~/Documents/development/raspberry/"
-alias arduino="cd ~/Documents/development/arduino/"
-alias tickets="cd ~/Documents/development/tickets/"
-
-# Python
-newpy(){
-	sudo cp ~/Documents/development/raspberry/templates/base.py $1.py
-}
-debug(){
-	sudo pudb "$1"
-}
-alias venv="source venv/bin/activate"
-alias activate=venv
-
-# Django
-alias run="clear;python3 manage.py runserver 0.0.0.0:8000"
-
-# Git
-alias gs="sudo git status"
-alias ga="sudo git add"
-alias gc="sudo git commit -m"
-alias gp="sudo git push"
-
-# Anaconda2
-export PATH="/Users/lucas/anaconda2/bin:$PATH"
-
 # Startup
 # Initialize dir with cleared screen
-dev;clear
 source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
+dev;clear
