@@ -15,24 +15,23 @@ export TICKETS="~/Documents/development/tickets"
 # SSH aliases
 alias rpi="ssh -R 52698:localhost:52698 $RPIUSER@$RPI"
 alias devrpi="ssh -R 52698:localhost:52698 $RPIUSER@$DEVRPI"
-
-function save {
-    export $1=`pwd`
-    echo "> Se guardo [`pwd`] como: $1"
-}
-
-function saved {
-    cd $1 
-    echo "> De vuelta a [$1]"
-}
-
 function rssh {
   ssh -R 52698:localhost:52698 $1
 }
-
 function enviar {
 	scp "$1" "$2@$3:$DEV"
 }
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls="ls --colors=auto"
+
+    alias grep="grep --color=auto"
+fi
+
+alias ll="ls -alF"
+alias la="ls -A"
+alias l="ls -CF"
+
 
 # Directories
 alias dev="cd $DEV"
@@ -56,8 +55,10 @@ alias run="clear;python3 manage.py runserver 0.0.0.0:8000"
 # Git
 alias gs="sudo git status"
 alias ga="sudo git add"
-alias gc="sudo git commit -m"
+alias gc="sudo git commit -am"
 alias gp="sudo git push"
+alias gd="sudo git diff $@"
+alias gpl="sudo git pull"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -181,4 +182,4 @@ source $ZSH/oh-my-zsh.sh
 # Startup
 # Initialize dir with cleared screen
 source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
-dev;clear
+dev; clear
